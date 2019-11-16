@@ -1,0 +1,36 @@
+<details>
+    <summary>
+        CONCEPTOS PRINCIPALES
+    </summary>
+        <ol>
+            <li>Hola mundo</li>
+            <li>Presentando JSX</li>
+            <li>Componentes y propiedades</li>
+            <li>Estado y ciclo de vida</li>
+            <li>Manejando eventos</li>
+            <li>Renderizado condicional</li>
+            <li>Listas y keys</li>
+            <li>Formularios</li>
+            <li> Levantando el estado</li>
+            <li> Composición vs. herencia</li>
+            <li> Pensando en React</li>
+        </ol>
+</details>
+
+details contiene el texto oculto
+summary contiene el texto que se muestra o titulo o sección el cual desplegara el texto oculto
+
+<details open>  por defecto esta desplagada la información 
+
+<script>
+    const $detailsList = document.querySelectorAll('details')    --guardo en una variable todos los selectores del tag details
+    $detailsList.forEach(($details)=>{                           --recorro con forEach 
+        $details.querySelector('summary').addEventListener('click', expand)  --agrego un evento de click a todos los tag de summary
+    })
+
+    function expand(){
+        $detailsList.forEach(($details)=>{
+            $details.removeAttribute('open')  --remueve el atributo open
+        })
+    }
+</script>
